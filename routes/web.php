@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect(route('qrcode.index'));
 });
 
 Route::get('generate-qrcode', [QRCodeController::class, 'index'])->name('qrcode.index');
